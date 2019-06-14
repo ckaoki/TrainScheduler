@@ -1,0 +1,31 @@
+body{
+    /* background: blue; */
+}
+
+.jumbotron{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#currentTrainSchedule, #addTrain{
+    padding-top: 10px;
+    margin-left:0;
+    margin-right:0;
+}
+
+.sectionHeader{
+    padding: 10px;
+    font-weight: bold;
+}
+
+#submitButton{
+    margin-bottom: 10px;
+}
+
+#rowSpacer{
+    height: 20px;
+}
+
+#addTrain{
+    font-weight: bold;
+}
