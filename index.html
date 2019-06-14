@@ -10,20 +10,30 @@
   <body>
     <div class="container">
       <!-- header -->
-      <div class="row">
-        <div class="col-12 text-center">
-          <div class="jumbotron border border-primary">
-            <h1 class="display-3 text-primary font-weight-bold">Train Scheduler</h1>
-            <p class="lead text-primary font-weight-bold">Chugga Chugga Choo Choo</p>
+          <div class="jumbotron text-white border border-secondary text-center">
+            <h1 class="display-3 font-weight-bold">Train Scheduler</h1>
+            <p class="lead text-white font-weight-bold">Chugga Chugga Choo Choo</p>
           </div>
-        </div>
-      </div>
       
       <!-- current train schedule -->
-      <nav class="sectionHeader bg-primary text-light rounded">Current Train Schedule</nav>
-      <div class="row border border-primary" id="currentTrainSchedule">
-        <div class="col 12">
-          
+      <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4 border border-primary rounded">
+                <div class="card-header bg-primary text-light">Current Train Schedule</div>
+                <div class="card-body">
+                  <table class="table table-sm table-hover" id="currentTrainSchedule">
+                    <thead>
+                      <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Miniutes Away</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
         </div>
       </div>
 
@@ -31,28 +41,32 @@
       <div class="row" id="rowSpacer"></div>
 
       <!-- add train -->
-      <nav class="sectionHeader bg-primary text-light rounded">Add Train</nav>
-      <div class="row border border-primary" id="addTrain">
+      <div class="row" id="addTrain">
         <div class="col 12">
-            <form>
-              <div class="form-group">
-                <label for="trainName">Train Name</label>
-                <input type="text" class="form-control" id="trainName" placeholder="">  
+          <div class="card mb-4 border border-primary rounded">
+            <div class="card-header bg-primary text-light">Current Train Schedule</div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="trainName">Train Name</label>
+                    <input type="text" class="form-control" id="trainName" placeholder="">  
+                  </div>
+                  <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" class="form-control" id="destination" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="firstTrainTime">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="firstTrainTime" placeholder="HH:mm">
+                  </div>
+                  <div class="form-group">
+                    <label for="Frequency">Frequency (min)</label>
+                    <input type="number" class="form-control" id="frequency" placeholder="">
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                </form>
               </div>
-              <div class="form-group">
-                <label for="destination">Destination</label>
-                <input type="text" class="form-control" id="destination" placeholder="">
-              </div>
-              <div class="form-group">
-                <label for="firstTrainTime">First Train Time (HH:mm - military time)</label>
-                <input type="time" class="form-control" id="first train time" placeholder="">
-              </div>
-              <div class="form-group">
-                <label for="Frequency">Frequency (min)</label>
-                <input type="number" class="form-control" id="Frequency" placeholder="">
-              </div>
-              <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
-            </form>
+            </div>
         </div>
       </div>
     </div>
